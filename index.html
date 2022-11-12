@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="./assets/css/style.css">
-<link rel="icon" type="image/x-icon" href="./assets/img/logo_bmw.png">
+<link rel="stylesheet" href="./assets/css/responsive.css">
+<link rel="icon" type="image/x-icon" href="./assets/img/logo_band.png">
 <script src="https://kit.fontawesome.com/41cc003ede.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./assets/font/themify-icons.css">
 <html>
     <head>
-        <title>BMW 330i Msport All New 2022</title>
+        <title>The Band</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale=1.0">
     </head>
     <body>
         <div id="main">
@@ -28,6 +31,10 @@
                 <div class="header-search">
                     <i class=" fa-sharp fa-solid fa-magnifying-glass"></i>
                 </div>
+                <div id="menu-btn" class="mobile-menu">
+                    <i class="fa-sharp fa-solid fa-bars menu-icon"></i>
+                </div>
+                
             </div>
             <div id="slider">
                 <div class="slider-content">
@@ -127,12 +134,12 @@
                                 Chicago, US
                             </p>
                             <p class="info-list">
-                                <i class="fa-solid fa-phone"></i>    
-                                Phone: +00 151515
+                                <i class="fa-solid fa-phone"></i> Phone: 
+                                <a href="tell:+00 151515">+00 151515</a>
                             </p>
                             <p class="info-list">
-                                <i class="fa-solid fa-envelope"></i>  
-                                Email: mail@mail.com
+                                <i class="fa-solid fa-envelope"></i>Email:
+                                <a href="mailto:mail@mail.com">mail@mail.com</a>
                             </p>
 
                         </div>
@@ -226,8 +233,44 @@
                 event.stopPropagation()
             })
         </script>
-        
+        <script>
+            var mobileMenu=document.getElementById('menu-btn');
+            var header=document.getElementById('header');
+            var headerHeight=header.clientHeight;
+            var menuItems=document.querySelectorAll('.nav li a[href*="#"');
+            mobileMenu.onclick=function() {
+                var isClosed=header.clientHeight===headerHeight;
+                if (isClosed) {
+                    header.style.height='auto';
+                } else {
+                    header.style.height=null;
+                }
+            }
+            for (var i=0;i<menuItems.length;i++) {
+                var menuItem=menuItems[i];
+                var isExcept=menuItem.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav');
+                if (!isExcept) {
+                    menuItem.onclick=function() {
+                    header.style.height=null;
+                    } 
+                } else {
+                    menuItem.onclick=function(event){
+                        event.preventDefault();
+                    }
+                }
+            }
 
+                    
+                   
+                
+
+                
+                
+            
+            
+        
+        </script>
+      
     </body>
    
 </html>

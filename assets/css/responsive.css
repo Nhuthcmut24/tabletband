@@ -1,0 +1,113 @@
+/* PC */
+@media (min-width:64em) {
+
+}
+/* Tablet & PC */
+@media (max-width:63.9375em) {
+    .buy-ticket {
+        padding: 18px 22px;
+    }
+    .input-email, .input-name, .input-message {
+        padding: 16px;
+    }
+    .send-btn{
+        padding: 18px 27px;
+    }
+    .contact-info p {
+        line-height: 2.2;
+    }
+    .icon-list {
+        font-size: 48px;
+        
+    }
+    .fa-brands {
+        margin: 0 8px;
+    }
+    .footer-content {
+        font-size: 20px;
+        margin-top: 28px;
+    }
+}
+/* Tablet */
+@media (min-width:46.25em) and (max-width:63.9375em) {
+    
+    .modal-container {
+        margin: 0 20px;;
+    }
+}
+/* Mobile */
+@media (max-width:46.1875em) {
+    .header-search{
+        display: none;
+    }
+    .mobile-menu{
+        display:flex;
+    }
+    .nav {
+        display: block;
+    }
+    .nav li {
+        display:block
+    }
+    #header{
+        overflow: hidden;
+    }
+    .nav li a{
+        display: block;
+    }
+    .subnav{
+        position: initial;
+        background-color: #333;
+    }
+    .subnav li a {
+        color:#fff;
+        padding: 0px 60px;
+    }
+    .member-list{
+        width: 100%;
+    }
+    .heading-slider{
+        display: none;
+    }
+    .sub-heading-slider{
+        display: none;
+    }
+    .member-img{
+        width: 60%;
+        padding-bottom: 30px;
+    }
+    .tour-list{
+        width:100%;
+        padding-bottom: 16px;
+    }
+    .modal-container {
+        margin: 0 10px;;
+    }
+    .buy-ticket {
+        width: 100%;
+    }
+    .contact-input{
+        width: 100%;
+        margin-top: 16px;
+    }
+    .contact-info{
+        width: 100%;
+    }
+    .input-line1{
+        padding-right: 0;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .input11{
+        margin-bottom: 8px;
+    }
+    .input-line2 {
+        width: 100%;
+        padding-left: 0;
+    }
+    .input-line3 {
+    }
+    .send-btn {
+        width: 100%;
+    }
+}
